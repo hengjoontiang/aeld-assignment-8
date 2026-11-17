@@ -26,7 +26,7 @@ jobs:
               GIT_SSH_COMMAND: "ssh -o StrictHostKeyChecking=no"
               FORCE_UNSAFE_CONFIGURE: 1
             run: |
-                  ./full-test.sh
+                  ./build.sh
                   
                  
           - name: Cleanup
