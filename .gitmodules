@@ -3,11 +3,11 @@
 	url =https://github.com/cu-ecen-5013/assignment-autotest  
 [submodule "assignments-3-and-later-hengjoontiang"]
 	path = assignments-3-and-later-hengjoontiang
-	url = git@github.com:hengjoontiang/aeld-assignment-3-and-later.git
+	url = ../aeld-assignment-3-and-later.git
 	branch = main
 [submodule "assignment-7-hengjoontiang"]
 	path = assignment-7-hengjoontiang
-	url = git@github.com:hengjoontiang/aeld-assignment-7.git
+	url = ../aeld-assignment-7.git
 
 [submodule "buildroot"]
 	path = buildroot
