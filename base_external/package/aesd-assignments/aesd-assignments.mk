@@ -34,9 +34,13 @@ endef
 define AESD_ASSIGNMENTS_INSTALL_TARGET_CMDS
 	echo "@D=$(@D)"
 	echo "${HOME}"
-	$(INSTALL) -d 0755 $(@D)/conf/ $(TARGET_DIR)/etc/finder-app/conf/
-	$(INSTALL) -m 0755 $(@D)/conf/* $(TARGET_DIR)/etc/finder-app/conf/
-	$(INSTALL) -m 0755 $(@D)/assignment-autotest/test/assignment5-buildroot/* $(TARGET_DIR)/bin
+	$(INSTALL) -d -m 0755 $(TARGET_DIR)/etc/finder-app/conf/
+	$(INSTALL) -d -m 0755 $(TARGET_DIR)/bin/
+
+	#$(INSTALL) -m 0644 -t $(@D)/conf/ $(TARGET_DIR)/etc/finder-app/conf/
+	cp -a $(@D)/conf/. $(TARGET_DIR)/etc/finder-app/conf/
+	#$(INSTALL) -m 0755 $(@D)/assignment-autotest/test/assignment5-buildroot/* $(TARGET_DIR)/bin
+	cp -a $(@D)/assignment-autotest/test/assignment5-buildroot/. $(TARGET_DIR)/bin
 	
 	#additional requirements 
 	$(INSTALL) -m 0755 $(@D)/finder-app/writer $(TARGET_DIR)/bin
